@@ -1,0 +1,31 @@
+<poesia>
+	<titulo>Chuva e Sol</titulo>
+	<autor>Adelina Lopes Vieira</autor>
+	<imagem>chuvaesol.png</imagem>
+	<texto>
+		<estrofe>
+			<verso>Junta ao pendor do abismo e suster-se sozinha;</verso>
+			<verso> quase a tombar no mal, lutar vencendo o mal,</verso>
+			<verso> é difícil, é belo! Eu vi exemplo igual</verso>
+			<verso> na ingênua candidez de linda criancinha.</verso>
+		</estrofe>
+		<estrofe>
+			<verso> Disse a mamãe, um dia, à loura Georgeana:</verso>
+			<verso> — Se até anoitecer, eu não te ouvir chorar,</verso>
+			<verso> nem dar gritos, prometo, amor, ir-te comprar</verso>
+			<verso> uma nenê gentil, d'olhos de porcelana.</verso>
+		</estrofe>
+		<estrofe>
+			<verso> Apenas isto ouviu, a bela pequenita</verso>
+			<verso> dança e salta a cantar, com tal sofreguidão,</verso>
+			<verso> que entontecendo, cai, ao comprido, no chão.</verso>
+			<verso> Esqueceu-lhe a promessa. Ei-la que chora e grita.</verso>
+		</estrofe>
+		<estrofe>
+			<verso> — Prantos? adeus boneca. Ouvindo esta ameaça,</verso>
+			<verso> ergue-se Georgeana e diz muito ligeira,</verso>
+			<verso> mudando o choro em riso, e com imensa graça.</verso>
+			<verso> — Chorei... por brincadeira... </verso>
+		</estrofe>
+	</texto>
+</poesia>
