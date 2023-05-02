@@ -3,7 +3,9 @@ onload = function () {
     this.document.getElementById("secPesAno").style.display = 'none';
     this.document.getElementById("secPesAutor").style.display = 'none';
     this.document.getElementById("secPesCategoria").style.display = 'none';
-    this.document.getElementById("secPesTodos").style.display = 'none';   
+    this.document.getElementById("secPesTodos").style.display = 'none';
+    this.document.getElementById("secCadastro").style.display = 'none';
+    this.document.getElementById("divCadastro").style.display = 'none';
 }
 
 function estilizaButton(botao) {
@@ -30,21 +32,60 @@ function limpaButton(botao) {
 
 }
 
-function OpcaoPesquisa(opcao,botao) {
-    const pesOpcao = document.getElementsByClassName('opcaoPesquisa');      
-    
-    for (let index = 0; index < pesOpcao.length; index++) {                                 
+function OpcaoPesquisa(opcao, botao) {
+    const pesOpcao = document.getElementsByClassName('opcaoPesquisa');
+
+    for (let index = 0; index < pesOpcao.length; index++) {
         if (opcao != pesOpcao[index].id) {
-            this.document.getElementById(pesOpcao[index].id).style.display = 'none';                                            
+            this.document.getElementById(pesOpcao[index].id).style.display = 'none';
+        } else {
+            this.document.getElementById(pesOpcao[index].id).style.display = 'block';
         }
-        else{
-            this.document.getElementById(pesOpcao[index].id).style.display = 'block';                           
-        }        
     }
     document.querySelector("tbody").innerHTML = '';
     estilizaButton(botao);
-    if(botao=="butTodos"){
+    if (botao == "butTodos") {
         listarTodos();
-    }   
+        document.getElementById('formCadastro').reset();
+    }
+    if (botao == "butCadastro") {
+        document.getElementById("divResultado").style.display = 'none';
+        document.getElementById("divCadastro").style.display = 'block';
+        remuveAutores();
+        document.getElementById('formCadastro').reset();
+        this.document.getElementById("butCadastrar").textContent="Cadastrar";
+        this.document.getElementById("butCadastrar").onclick=salvarLivro;
+    } else {
+        document.getElementById("divResultado").style.display = 'block';
+        document.getElementById("divCadastro").style.display = 'none';
+        remuveAutores();
+    }
 
+}
+
+// botão mais autores
+function addAutores() {
+    let ultimoAutor = (document.getElementById('divAutores')).lastElementChild;
+    let novoAutor = ultimoAutor.cloneNode(true);
+    let numAutores = (document.getElementById('divAutores')).getElementsByTagName('input').length;
+    numAutores++; // Incrementa o índice do campo para criar id
+    let novoAutorInput = novoAutor.querySelector('input');
+    (document.getElementById('divAutores')).appendChild(novoAutor);
+    (document.getElementById('divAutores')).getElementsByTagName('input').item(numAutores-1).setAttribute('id', 'inputAutor' + numAutores);
+    (document.getElementById('divAutores')).getElementsByTagName('input').item(numAutores-1).setAttribute('class', 'classInputAutores');
+    (document.getElementById('divAutores')).getElementsByTagName('input').item(numAutores-1).value='';
+
+}
+
+function remuveAutores() {
+    let qtAutores = (document.getElementById('divAutores')).getElementsByTagName('input').length;
+
+    for (;qtAutores>1 ; qtAutores--) {
+        nId=(qtAutores);
+        nomeNone="inputAutor"+nId;
+        noRemovido = document.getElementById(`${nomeNone}`)
+        //console.log(noRemovido);
+        document.getElementById('divAutores').removeChild(noRemovido);
+    }
+    qtAutores=0;
 }

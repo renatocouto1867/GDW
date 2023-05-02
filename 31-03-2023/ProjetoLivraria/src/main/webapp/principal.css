@@ -1,8 +1,9 @@
 :root {
-    --fundoPesquisa: #EBB39E;
+    /*--fundoPesquisa: #EBB39E;*/
+    --fundoPesquisa: #e3dab8;
     --fundoMenu: #293263;
     --temaTabela: #4B0082;
-    --fundoClaro: #F2F1F0;
+    --fundoClaro: #fff;
 }
 
 html {
@@ -75,6 +76,45 @@ body {
     background-color: var(--temaTabela);
 }
 
+#divCadastro{
+    text-align: center;
+}
+
+#divCadastro form{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    align-items: center;
+    text-align: initial;
+    border-bottom: solid 1px;
+    margin-bottom: 5px;
+}
+
+#divCadastro form button{
+    color: var(--fundoClaro);
+    background-color: grey;
+}
+
+#divCadastro label{
+    width: 50%;
+    padding: 2px;
+    margin: 2px;
+}
+
+#divCadastro input{
+    width: 50%;
+    padding: 2px;
+    margin: 2px;
+}
+#divCadastro button{
+    width: 30%;
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+    color: var(--fundoClaro);
+    background-color: var(--fundoMenu);
+}
+
 tr {
     background-color: var(--temaTabela);
     color: var(--fundoClaro);
@@ -117,6 +157,11 @@ table td:nth-child(6) {
     text-align: center;
     font-size: 1.2em;
 }
+
+#secCadastro {
+    text-align: center;
+    font-size: 1.2em;
+}
 ul{
     padding-left: 0;
     margin-bottom: 0;
@@ -132,3 +177,11 @@ li {
 
 }
 
+#divAutores{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+#divAutores input{
+    width: 50%;
+}

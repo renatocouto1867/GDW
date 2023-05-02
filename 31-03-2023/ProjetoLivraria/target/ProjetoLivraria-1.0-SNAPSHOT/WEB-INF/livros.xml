@@ -1,4 +1,4 @@
-<livraria>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><livraria>
     <livro categoria="cooking">
         <titulo lang="en">Everyday Italian</titulo>
         <autor>Giada De Laurentiis</autor>
@@ -27,22 +27,6 @@
         <ano>2003</ano>
         <preco>39.95</preco>
     </livro>
-    <livro categoria="web" cover="paperback">
-        <titulo lang="en">XML</titulo>
-        <autor>Erik</autor>
-        <ano>2003</ano>
-        <preco>39.95</preco>
-    </livro>
-    <livro categoria="web" cover="paperback">
-        <titulo lang="en">XML</titulo>
-        <autor>Erik222</autor>
-        <ano>2003</ano>
-        <preco>39.95</preco>
-    </livro>
-    <livro categoria="web" cover="paperback">
-        <titulo lang="pt-BR">XML Portugês</titulo>
-        <autor>Erik222</autor>
-        <ano>2003</ano>
-        <preco>55.00</preco>
-    </livro>
-</livraria>
+    
+    
+<livro categoria="web"><tituloAntigo>Java</tituloAntigo><titulo lang="pt_BR">Java</titulo><autor>Jose maria</autor><autor>maria Jose</autor><autor>Joaquim</autor><ano>2023</ano><preco>900</preco></livro><livro categoria="children"><titulo lang="pt_BR">Turma da Monica</titulo><autor>Maricio</autor><ano>2023</ano><preco>419.00</preco></livro><livro categoria="children"><tituloAntigo>Coleção Nova</tituloAntigo><titulo lang="us">Coleção Nova</titulo><autor>Jose Miguel</autor><autor>Miguel Jose</autor><autor>Joaquim</autor><ano>2021</ano><preco>51.90</preco></livro></livraria>

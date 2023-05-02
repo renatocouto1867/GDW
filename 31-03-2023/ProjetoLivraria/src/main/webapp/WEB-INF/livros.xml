@@ -39,10 +39,4 @@
         <ano>2003</ano>
         <preco>39.95</preco>
     </livro>
-    <livro categoria="web" cover="paperback">
-        <titulo lang="pt-BR">XML Portugês</titulo>
-        <autor>Erik222</autor>
-        <ano>2003</ano>
-        <preco>55.00</preco>
-    </livro>
 </livraria>

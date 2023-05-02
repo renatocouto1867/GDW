@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="shortcut icon" href="favicon.png"/>
     <title>Livraria Modelo</title>
 
     <script src="menuButton.js"></script>
@@ -19,17 +19,30 @@
 <div id="divPrincipal">
     <div id="divMenu">
         <img src="livroAzul.jpeg" alt="Livro" width="200px" height="200px">
-        <button class="butPesquisa" id="butPesTitulo" type="button" onclick="OpcaoPesquisa('secPesTitulo', 'butPesTitulo')">Pesquisar por Titulo</button>
-        <button class="butPesquisa" id="butPesAno" type="button" onclick="OpcaoPesquisa('secPesAno', 'butPesAno')">Pesquisar por Ano</button>
-        <button class="butPesquisa" id="butPesAutor" type="button" onclick="OpcaoPesquisa('secPesAutor','butPesAutor')">Pesquisar por Autor</button>
-        <button class="butPesquisa" id="butPesCategoria" type="button" onclick="OpcaoPesquisa('secPesCategoria','butPesCategoria')">Pesquisar por Categoria</button>
-        <button class="butPesquisa" id="butTodos" type="button" onclick="OpcaoPesquisa('secPesTodos','butTodos')">Listar Todos os Livros</button>
+        <button class="butPesquisa" id="butPesTitulo" type="button"
+                onclick="OpcaoPesquisa('secPesTitulo', 'butPesTitulo')">Pesquisar por Titulo
+        </button>
+        <button class="butPesquisa" id="butPesAno" type="button" onclick="OpcaoPesquisa('secPesAno', 'butPesAno')">
+            Pesquisar por Ano
+        </button>
+        <button class="butPesquisa" id="butPesAutor" type="button" onclick="OpcaoPesquisa('secPesAutor','butPesAutor')">
+            Pesquisar por Autor
+        </button>
+        <button class="butPesquisa" id="butPesCategoria" type="button"
+                onclick="OpcaoPesquisa('secPesCategoria','butPesCategoria')">Pesquisar por Categoria
+        </button>
+        <button class="butPesquisa" id="butTodos" type="button" onclick="OpcaoPesquisa('secPesTodos','butTodos')">Listar
+            Todos os Livros
+        </button>
+        <button class="butPesquisa" id="butCadastro" type="button" onclick="OpcaoPesquisa('secCadastro','butCadastro')">
+            Cadastrar Livros
+        </button>
     </div>
     <div id="divPesquisa">
         <div id="divOpcoes">
             <section class="opcaoPesquisa" id="secOpcao">
-                 <h1>Selecione uma opção</h1>
-             </section>
+                <h1>Selecione uma opção</h1>
+            </section>
 
             <section class="opcaoPesquisa" id="secPesTitulo">
                 <fieldset>
@@ -79,14 +92,22 @@
 
             <section class="opcaoPesquisa" id="secPesTodos">
 
-                    <h1>Lista de todos os Livros</h1>
+                <h1>Lista de todos os Livros</h1>
 
             </section>
+
+            <section class="opcaoPesquisa" id="secCadastro">
+
+                <h1>Cadastrar novo Livros</h1>
+
+            </section>
+
         </div>
+
         <div id="divResultado">
             <table id="tabResultado">
                 <thead>
-                <tr >
+                <tr>
                     <th>Categoria</th>
                     <th>Título</th>
                     <th>Autor</th>
@@ -98,6 +119,31 @@
                 <tbody></tbody>
             </table>
         </div>
+
+        <div id="divCadastro">
+            <form id="formCadastro" action="">
+                <input type="hidden" id="tituloAnterior" value="seu_valor_aqui">
+                <label for="inputCategoria">Categoria</label>
+                <input id="inputCategoria" required type="text">
+                <label for="inputTitulo">Título</label>
+                <input id="inputTitulo" required type="text">
+                <label for="inputIdioma">Idioma</label>
+                <input id="inputIdioma" required type="text">
+                <label for="inputAno" >Ano</label>
+                <input id="inputAno" required type="text">
+                <label for="inputPreco">Preço</label>
+                <input id="inputPreco" required type="text">
+
+                <label>Autores:</label>
+                <div id="divAutores">
+                    <input id="inputAutor1" class="classInputAutores" type="text" required placeholder="Nome do autor">
+                </div>
+                <button type="button" id="add-autor" onclick="addAutores()">Adicionar novo autor</button>
+            </form>
+            <button type="button" id="butCadastrar" onclick="salvarLivro()">Cadastrar</button>
+        </div>
+
+
     </div>
 
 </div>
